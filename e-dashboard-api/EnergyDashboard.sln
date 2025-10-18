@@ -1,0 +1,101 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnergyDashboard", "src\EnergyDashboard\EnergyDashboard.csproj", "{AA6BA823-CB0A-4100-825B-F74418BDA89E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{10A1AC0C-E565-4E02-B26D-19AE6119779A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnergyDashboard.Application", "src\Application\EnergyDashboard.Application.csproj", "{571019A6-4AE1-4E42-A384-F1C309EED1CB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnergyDashboard.Domain", "src\Domain\EnergyDashboard.Domain.csproj", "{B83824F4-1D49-4316-8324-312990485181}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnergyDashboard.Infrastructure", "src\Infrastructure\EnergyDashboard.Infrastructure.csproj", "{A7CE55F6-836E-495A-B473-AB124DCC1E74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9D3DF001-62B3-41CE-A454-CB86202F6B07}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		build.ps1 = build.ps1
+		Directory.Packages.props = Directory.Packages.props
+		Dockerfile = Dockerfile
+		global.json = global.json
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy", "deploy", "{BF92DF1D-20CC-4F12-8697-6CF12A5F3CBE}"
+	ProjectSection(SolutionItems) = preProject
+		deploy\.helmignore = deploy\.helmignore
+		deploy\Chart.yaml = deploy\Chart.yaml
+		deploy\values.yaml = deploy\values.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "templates", "templates", "{DA918ACB-506C-4954-B071-6E1ADE16AC67}"
+	ProjectSection(SolutionItems) = preProject
+		deploy\templates\deployment.yaml = deploy\templates\deployment.yaml
+		deploy\templates\hpa.yaml = deploy\templates\hpa.yaml
+		deploy\templates\ingress.yaml = deploy\templates\ingress.yaml
+		deploy\templates\NOTES.txt = deploy\templates\NOTES.txt
+		deploy\templates\service.yaml = deploy\templates\service.yaml
+		deploy\templates\serviceaccount.yaml = deploy\templates\serviceaccount.yaml
+		deploy\templates\_helpers.tpl = deploy\templates\_helpers.tpl
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notification.Grpc", "..\notification\src\Notification.Grpc\Notification.Grpc.csproj", "{58D8D631-57B8-4B25-94A8-39CDB653D55A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeterService.gRPC", "..\meterservice\src\MeterService.gRPC\MeterService.gRPC.csproj", "{E4D35D43-E0D2-4339-A954-0C8B289D92EE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notification.Domain", "..\notification\src\Notification.Domain\Notification.Domain.csproj", "{D28B20DE-A407-412E-AC36-C4748125C8EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA6BA823-CB0A-4100-825B-F74418BDA89E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA6BA823-CB0A-4100-825B-F74418BDA89E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA6BA823-CB0A-4100-825B-F74418BDA89E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA6BA823-CB0A-4100-825B-F74418BDA89E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{571019A6-4AE1-4E42-A384-F1C309EED1CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{571019A6-4AE1-4E42-A384-F1C309EED1CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{571019A6-4AE1-4E42-A384-F1C309EED1CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{571019A6-4AE1-4E42-A384-F1C309EED1CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B83824F4-1D49-4316-8324-312990485181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B83824F4-1D49-4316-8324-312990485181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B83824F4-1D49-4316-8324-312990485181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B83824F4-1D49-4316-8324-312990485181}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7CE55F6-836E-495A-B473-AB124DCC1E74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7CE55F6-836E-495A-B473-AB124DCC1E74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7CE55F6-836E-495A-B473-AB124DCC1E74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7CE55F6-836E-495A-B473-AB124DCC1E74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58D8D631-57B8-4B25-94A8-39CDB653D55A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58D8D631-57B8-4B25-94A8-39CDB653D55A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58D8D631-57B8-4B25-94A8-39CDB653D55A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58D8D631-57B8-4B25-94A8-39CDB653D55A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4D35D43-E0D2-4339-A954-0C8B289D92EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4D35D43-E0D2-4339-A954-0C8B289D92EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4D35D43-E0D2-4339-A954-0C8B289D92EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4D35D43-E0D2-4339-A954-0C8B289D92EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D28B20DE-A407-412E-AC36-C4748125C8EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D28B20DE-A407-412E-AC36-C4748125C8EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D28B20DE-A407-412E-AC36-C4748125C8EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D28B20DE-A407-412E-AC36-C4748125C8EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AA6BA823-CB0A-4100-825B-F74418BDA89E} = {10A1AC0C-E565-4E02-B26D-19AE6119779A}
+		{571019A6-4AE1-4E42-A384-F1C309EED1CB} = {10A1AC0C-E565-4E02-B26D-19AE6119779A}
+		{B83824F4-1D49-4316-8324-312990485181} = {10A1AC0C-E565-4E02-B26D-19AE6119779A}
+		{A7CE55F6-836E-495A-B473-AB124DCC1E74} = {10A1AC0C-E565-4E02-B26D-19AE6119779A}
+		{DA918ACB-506C-4954-B071-6E1ADE16AC67} = {BF92DF1D-20CC-4F12-8697-6CF12A5F3CBE}
+		{58D8D631-57B8-4B25-94A8-39CDB653D55A} = {10A1AC0C-E565-4E02-B26D-19AE6119779A}
+		{E4D35D43-E0D2-4339-A954-0C8B289D92EE} = {10A1AC0C-E565-4E02-B26D-19AE6119779A}
+		{D28B20DE-A407-412E-AC36-C4748125C8EF} = {10A1AC0C-E565-4E02-B26D-19AE6119779A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D1EE5B97-85F2-4391-A142-1D66BE514E9B}
+	EndGlobalSection
+EndGlobal

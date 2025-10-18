@@ -1,0 +1,7 @@
+﻿using EnergyDashboard.Domain.Entities;
+
+namespace EnergyDashboard.Domain.Repository;
+
+public interface ILoadFeederTypeRepository : IRepository<int, LoadFeederType>
+{
+}

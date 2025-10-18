@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+		<PackageReference Include="FluentValidation" />
+		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+		<PackageReference Include="Serilog.AspNetCore" />
+		<PackageReference Include="Serilog.Enrichers.Environment" />
+		<PackageReference Include="Serilog.Sinks.Seq" />
+		<PackageReference Include="Serilog.Sinks.File" />
+		<PackageReference Include="Application.Common" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\meterservice\src\MeterService.gRPC\MeterService.gRPC.csproj" />
+	  <ProjectReference Include="..\..\..\notification\src\Notification.Grpc\Notification.Grpc.csproj" />
+	  <ProjectReference Include="..\Domain\EnergyDashboard.Domain.csproj" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,24 @@
+// If you want to override variables do it here
+// @import "calendar";
+// @import "variables";
+
+$enable-ltr: false;
+$enable-rtl: true;
+
+// Import CoreUI for React components library
+@import "coreui/coreui";
+
+@import "layout";
+@import "custom";
+@import "font";
+
+@import "@syncfusion/ej2-base/styles/bootstrap5.css";
+@import "@syncfusion/ej2-popups/styles/bootstrap5.css";
+@import "@syncfusion/ej2-inputs/styles/bootstrap5.css";
+@import "@syncfusion/ej2-lists/styles/bootstrap5.css";
+@import "@syncfusion/ej2-buttons/styles/bootstrap5.css";
+@import "@syncfusion/ej2-calendars/styles/bootstrap5.css";
+@import 'dataviz.css';
+
+
+// If you want to add custom CSS you can put it here.

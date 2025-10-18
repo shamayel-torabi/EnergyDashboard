@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{763AAB67-7E0F-4A29-9BEE-C99A92759CE1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{06ADC043-024A-47B7-B894-E629769299F6}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		build.ps1 = build.ps1
+		Directory.Packages.props = Directory.Packages.props
+		Dockerfile = Dockerfile
+		global.json = global.json
+		install.ps1 = install.ps1
+		nuget.config = nuget.config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy", "deploy", "{41133D78-0A21-485F-81F3-9224CEF45E3D}"
+	ProjectSection(SolutionItems) = preProject
+		deploy\.helmignore = deploy\.helmignore
+		deploy\Chart.yaml = deploy\Chart.yaml
+		deploy\values.yaml = deploy\values.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "templates", "templates", "{EFADCD1C-41D7-4A3D-B267-451BB87DB2EA}"
+	ProjectSection(SolutionItems) = preProject
+		deploy\templates\deployment.yaml = deploy\templates\deployment.yaml
+		deploy\templates\hpa.yaml = deploy\templates\hpa.yaml
+		deploy\templates\ingress.yaml = deploy\templates\ingress.yaml
+		deploy\templates\NOTES.txt = deploy\templates\NOTES.txt
+		deploy\templates\service.yaml = deploy\templates\service.yaml
+		deploy\templates\serviceaccount.yaml = deploy\templates\serviceaccount.yaml
+		deploy\templates\_helpers.tpl = deploy\templates\_helpers.tpl
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notification.gRPC", "..\notification\src\Notification.Grpc\Notification.gRPC.csproj", "{C78B817B-2E4C-4967-92BE-B525D8DF67CF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeterFailService", "src\MeterFailService\MeterFailService.csproj", "{D1AE711F-AC67-44A2-A4EA-7ABCCA3211A0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeterService.gRPC", "..\meterservice\src\MeterService.gRPC\MeterService.gRPC.csproj", "{6C0EC52D-F244-4810-9665-6E91EE688C73}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notification.Domain", "..\notification\src\Notification.Domain\Notification.Domain.csproj", "{5C03AF1B-E673-4508-BECF-2C5C41C25BE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C78B817B-2E4C-4967-92BE-B525D8DF67CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C78B817B-2E4C-4967-92BE-B525D8DF67CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C78B817B-2E4C-4967-92BE-B525D8DF67CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C78B817B-2E4C-4967-92BE-B525D8DF67CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1AE711F-AC67-44A2-A4EA-7ABCCA3211A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1AE711F-AC67-44A2-A4EA-7ABCCA3211A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1AE711F-AC67-44A2-A4EA-7ABCCA3211A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1AE711F-AC67-44A2-A4EA-7ABCCA3211A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C0EC52D-F244-4810-9665-6E91EE688C73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C0EC52D-F244-4810-9665-6E91EE688C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C0EC52D-F244-4810-9665-6E91EE688C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C0EC52D-F244-4810-9665-6E91EE688C73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C03AF1B-E673-4508-BECF-2C5C41C25BE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C03AF1B-E673-4508-BECF-2C5C41C25BE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C03AF1B-E673-4508-BECF-2C5C41C25BE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C03AF1B-E673-4508-BECF-2C5C41C25BE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EFADCD1C-41D7-4A3D-B267-451BB87DB2EA} = {41133D78-0A21-485F-81F3-9224CEF45E3D}
+		{C78B817B-2E4C-4967-92BE-B525D8DF67CF} = {763AAB67-7E0F-4A29-9BEE-C99A92759CE1}
+		{D1AE711F-AC67-44A2-A4EA-7ABCCA3211A0} = {763AAB67-7E0F-4A29-9BEE-C99A92759CE1}
+		{6C0EC52D-F244-4810-9665-6E91EE688C73} = {763AAB67-7E0F-4A29-9BEE-C99A92759CE1}
+		{5C03AF1B-E673-4508-BECF-2C5C41C25BE0} = {763AAB67-7E0F-4A29-9BEE-C99A92759CE1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {06C741B8-3936-4BB2-976F-6AF45B85BA2B}
+	EndGlobalSection
+EndGlobal

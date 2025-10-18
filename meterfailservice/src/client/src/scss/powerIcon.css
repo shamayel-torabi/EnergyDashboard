@@ -1,0 +1,123 @@
+
+@font-face {
+    font-family: 'powerIcon';
+    src: url('PowerIcon.woff2') format('woff2'), url('PowerIcon.woff') format('woff'), url('PowerIcon.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.sh-select,
+.sh-connect,
+.sh-rectangle,
+.sh-circle,
+.sh-line,
+.sh-multiline,
+.sh-busbar,
+.sh-transformer,
+.sh-generator,
+.sh-ct,
+.sh-breaker,
+.sh-loadfeeder,
+.sh-linefeeder,
+.sh-save,
+.sh-import,
+.sh-export,
+.sh-clear,
+.sh-update,
+.sh-zoomin,
+.sh-zoomout,
+.sh-pan,
+.sh-rotateleft,
+.sh-rotateright,
+.sh-svg{
+  font-family: 'PowerIcon' !important;
+  display: inline-block;
+  font-size: 24px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sh-select::before {
+  content: '\f001';
+}
+.sh-connect::before {
+  content: '\f002';
+}
+.sh-rectangle::before {
+  content: '\f003';
+}
+.sh-circle::before {
+  content: '\f004';
+}
+.sh-line::before {
+  content: '\f005';
+}
+.sh-multiline::before {
+  content: '\f006';
+}
+.sh-busbar::before {
+  content: '\f007';
+}
+.sh-transformer::before {
+  content: '\f008';
+}
+.sh-generator::before {
+  content: '\f009';
+}
+.sh-ct::before {
+  content: '\f00a';
+}
+.sh-breaker::before {
+  content: '\f00b';
+}
+.sh-loadfeeder::before {
+  content: '\f00c';
+}
+.sh-linefeeder::before {
+  content: '\f00d';
+}
+.sh-save::before {
+  content: '\f00e';
+}
+.sh-export::before {
+  content: '\f00f';
+}
+.sh-import::before {
+  content: '\f010';
+}
+.sh-clear::before {
+  content: '\f011';
+}
+.sh-update::before {
+  content: '\f012';
+}
+.sh-zoomin::before {
+  content: '\f013';
+}
+.sh-zoomout::before {
+  content: '\f014';
+}
+.sh-pan::before {
+  content: '\f015';
+}
+.sh-rotateleft::before {
+    content: '\f016';
+}
+.sh-rotateright::before {
+    content: '\f017';
+}
+.sh-svg::before {
+  content: '\f018';
+}
+
+
+

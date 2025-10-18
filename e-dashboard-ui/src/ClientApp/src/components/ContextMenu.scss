@@ -1,0 +1,43 @@
+﻿.menu {
+    width: 175px;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    position: fixed;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.87);
+    display: none;
+    z-index: 1004;
+
+    ul {
+        margin-bottom: 0rem;
+    }
+
+    .menu-options {
+        list-style: none;
+        //padding: 5px 0;
+        .menu-option {
+            //padding: 5px 10px 5px 10px;
+            cursor: pointer;
+            text-align: right;
+            cursor: pointer;
+            height: 36px;
+            line-height: 36px;
+            padding: 0 5px;
+
+            &:hover {
+                background: rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        .menu-option-disable {
+            //padding: 5px 10px 5px 10px;
+            cursor: pointer;
+            text-align: right;
+            cursor: pointer;
+            height: 36px;
+            line-height: 36px;
+            padding: 0 5px;
+            color: darkgray;
+            pointer-events: none;
+        }
+    }
+}

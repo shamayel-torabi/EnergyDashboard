@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeterService", "src\MeterService\MeterService.csproj", "{C85E5E3E-2927-4993-8FF7-A062B41FCBBC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{763AAB67-7E0F-4A29-9BEE-C99A92759CE1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notification.Grpc", "..\notification\src\Notification.Grpc\Notification.Grpc.csproj", "{BB23385D-538A-4700-9628-814FD3AB4D51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{06ADC043-024A-47B7-B894-E629769299F6}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		build.ps1 = build.ps1
+		create-igmc-secret.ps1 = create-igmc-secret.ps1
+		Directory.Packages.props = Directory.Packages.props
+		Dockerfile = Dockerfile
+		install.ps1 = install.ps1
+		nuget.config = nuget.config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeterService.gRPC", "src\MeterService.gRPC\MeterService.gRPC.csproj", "{E7EE4529-E747-4161-B3FC-AEEB97533A26}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy", "deploy", "{41133D78-0A21-485F-81F3-9224CEF45E3D}"
+	ProjectSection(SolutionItems) = preProject
+		deploy\.helmignore = deploy\.helmignore
+		deploy\Chart.yaml = deploy\Chart.yaml
+		deploy\values.yaml = deploy\values.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "templates", "templates", "{EFADCD1C-41D7-4A3D-B267-451BB87DB2EA}"
+	ProjectSection(SolutionItems) = preProject
+		deploy\templates\deployment.yaml = deploy\templates\deployment.yaml
+		deploy\templates\hpa.yaml = deploy\templates\hpa.yaml
+		deploy\templates\ingress.yaml = deploy\templates\ingress.yaml
+		deploy\templates\NOTES.txt = deploy\templates\NOTES.txt
+		deploy\templates\service.yaml = deploy\templates\service.yaml
+		deploy\templates\serviceaccount.yaml = deploy\templates\serviceaccount.yaml
+		deploy\templates\_helpers.tpl = deploy\templates\_helpers.tpl
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C85E5E3E-2927-4993-8FF7-A062B41FCBBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C85E5E3E-2927-4993-8FF7-A062B41FCBBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C85E5E3E-2927-4993-8FF7-A062B41FCBBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C85E5E3E-2927-4993-8FF7-A062B41FCBBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB23385D-538A-4700-9628-814FD3AB4D51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB23385D-538A-4700-9628-814FD3AB4D51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB23385D-538A-4700-9628-814FD3AB4D51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB23385D-538A-4700-9628-814FD3AB4D51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7EE4529-E747-4161-B3FC-AEEB97533A26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7EE4529-E747-4161-B3FC-AEEB97533A26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7EE4529-E747-4161-B3FC-AEEB97533A26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7EE4529-E747-4161-B3FC-AEEB97533A26}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C85E5E3E-2927-4993-8FF7-A062B41FCBBC} = {763AAB67-7E0F-4A29-9BEE-C99A92759CE1}
+		{BB23385D-538A-4700-9628-814FD3AB4D51} = {763AAB67-7E0F-4A29-9BEE-C99A92759CE1}
+		{E7EE4529-E747-4161-B3FC-AEEB97533A26} = {763AAB67-7E0F-4A29-9BEE-C99A92759CE1}
+		{EFADCD1C-41D7-4A3D-B267-451BB87DB2EA} = {41133D78-0A21-485F-81F3-9224CEF45E3D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {06C741B8-3936-4BB2-976F-6AF45B85BA2B}
+	EndGlobalSection
+EndGlobal

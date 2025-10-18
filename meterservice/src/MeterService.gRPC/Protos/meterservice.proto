@@ -1,0 +1,112 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+
+
+option csharp_namespace = "MeterService.gRPC";
+
+package meterservice;
+
+
+service MeterService {
+    rpc GetMeters(google.protobuf.Empty) returns (MetersResponse);
+    rpc GetMeter(MeterRequest) returns (Meter);
+    rpc DeleteMeter(DeleteMeterRequest) returns (google.protobuf.Empty);
+    rpc UpdateMeter(UpdateMeterRequest) returns (google.protobuf.Empty);
+    rpc GetSubstations(google.protobuf.Empty) returns (SubstationResponse);
+    rpc GetSubstationMeters(SubstationMetersRequest) returns (MetersResponse);
+    rpc UpdateMeterTable(google.protobuf.Empty) returns (google.protobuf.BoolValue);
+    rpc GetMeterEnergy(MeterEnergyRequest) returns (MeterEnergyResponse);
+    rpc GetMetersEnergy(MetersEnergyRequest) returns (MeterEnergyResponse);
+    rpc DownloadMeterEnergy(DownloadMeterEnergyRequest) returns(google.protobuf.Empty);
+    rpc DownloadMetersEnergy(DownloadMetersEnergyRequest) returns(google.protobuf.Empty);
+}
+
+message DecimalValue {
+    int64 units = 1;
+    sfixed32 nanos = 2;
+}
+
+message Meter{
+    int32 meter_id = 1;
+    string serial_number = 2;
+    string name = 3;
+    int32 station_id = 4;
+    string station_name = 5;
+    bool active  = 6;
+    bool dismount  = 7;
+    google.protobuf.Timestamp start_operation_date = 8;
+    google.protobuf.Timestamp end_operation_date = 9;
+}
+
+message MeterEnergy{
+    string meter_energy_id = 1;
+    int32 meter_id = 2;
+    google.protobuf.Timestamp record_date = 3;
+    int32 tool_type_id = 4;
+    DecimalValue energy_active_export = 5;
+    DecimalValue energy_active_import = 6;
+    DecimalValue energy_reactive_export = 7;
+    DecimalValue energy_reactive_import = 8;
+}
+
+message Substation{
+    int32 value = 1;
+    string label = 2;
+}
+
+
+message MetersResponse{
+    repeated Meter meters = 1;
+}
+
+message MeterRequest{
+    string serial_number = 1;
+}
+
+message DeleteMeterRequest{
+    int32 meter_id = 1;
+}
+
+message UpdateMeterRequest{
+    Meter meter = 2;
+}
+
+message SubstationResponse{
+    repeated Substation Substations = 1;
+}
+
+message SubstationMetersRequest{
+    int32 substation_id = 1;
+}
+
+message MetersEnergyRequest{
+    google.protobuf.Timestamp date = 1;
+}
+
+message MeterEnergyRequest{
+    google.protobuf.Timestamp date = 1;
+    string serial_number = 2;
+}
+
+message MeterEnergyResponse{
+    repeated MeterEnergy meter_energies = 1;
+}
+
+message DownloadMeterEnergyRequest{
+    google.protobuf.Timestamp start_date = 1;
+    google.protobuf.Timestamp end_date = 2;
+    bool update = 3;
+    string serial_number = 4;
+}
+
+message DownloadMetersEnergyRequest{
+    google.protobuf.Timestamp start_date = 1;
+    google.protobuf.Timestamp end_date = 2;
+    bool update = 3;
+}
+
+
+

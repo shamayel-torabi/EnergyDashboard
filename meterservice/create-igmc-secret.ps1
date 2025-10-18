@@ -1,0 +1,1 @@
+kubectl.exe  create secret generic igmc-secret --from-literal=IGMC_USERNAME=torabi-hormozgan --from-literal=IGMC_PASSWORD=tor#2019!hor

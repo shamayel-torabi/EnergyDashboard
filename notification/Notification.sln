@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D8D3E736-6BDB-49C8-B536-B21A78FC6581}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E8773C83-C239-497E-9F91-39168DC999BB}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		build.ps1 = build.ps1
+		Directory.Packages.props = Directory.Packages.props
+		Dockerfile = Dockerfile
+		global.json = global.json
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy", "deploy", "{9DFB7458-AD6F-475C-B8CC-343DA0AC09F8}"
+	ProjectSection(SolutionItems) = preProject
+		deploy\.helmignore = deploy\.helmignore
+		deploy\Chart.yaml = deploy\Chart.yaml
+		deploy\values.yaml = deploy\values.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "templates", "templates", "{F81F7229-2B3D-4731-9EE3-05AE72E09CC5}"
+	ProjectSection(SolutionItems) = preProject
+		deploy\templates\deployment.yaml = deploy\templates\deployment.yaml
+		deploy\templates\hpa.yaml = deploy\templates\hpa.yaml
+		deploy\templates\ingress.yaml = deploy\templates\ingress.yaml
+		deploy\templates\NOTES.txt = deploy\templates\NOTES.txt
+		deploy\templates\service.yaml = deploy\templates\service.yaml
+		deploy\templates\serviceaccount.yaml = deploy\templates\serviceaccount.yaml
+		deploy\templates\_helpers.tpl = deploy\templates\_helpers.tpl
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notification", "src\Notification\Notification.csproj", "{34D7050A-9331-4C62-A5EF-9F46EB22C8DF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notification.gRPC", "src\Notification.Grpc\Notification.gRPC.csproj", "{254B612C-AC05-4A5B-A770-726DA1FDB8E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notification.Domain", "src\Notification.Domain\Notification.Domain.csproj", "{24E2A439-00D6-4430-BDBD-65DEB30DAC66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34D7050A-9331-4C62-A5EF-9F46EB22C8DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34D7050A-9331-4C62-A5EF-9F46EB22C8DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34D7050A-9331-4C62-A5EF-9F46EB22C8DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34D7050A-9331-4C62-A5EF-9F46EB22C8DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{254B612C-AC05-4A5B-A770-726DA1FDB8E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{254B612C-AC05-4A5B-A770-726DA1FDB8E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{254B612C-AC05-4A5B-A770-726DA1FDB8E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{254B612C-AC05-4A5B-A770-726DA1FDB8E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24E2A439-00D6-4430-BDBD-65DEB30DAC66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24E2A439-00D6-4430-BDBD-65DEB30DAC66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24E2A439-00D6-4430-BDBD-65DEB30DAC66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24E2A439-00D6-4430-BDBD-65DEB30DAC66}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F81F7229-2B3D-4731-9EE3-05AE72E09CC5} = {9DFB7458-AD6F-475C-B8CC-343DA0AC09F8}
+		{34D7050A-9331-4C62-A5EF-9F46EB22C8DF} = {D8D3E736-6BDB-49C8-B536-B21A78FC6581}
+		{254B612C-AC05-4A5B-A770-726DA1FDB8E2} = {D8D3E736-6BDB-49C8-B536-B21A78FC6581}
+		{24E2A439-00D6-4430-BDBD-65DEB30DAC66} = {D8D3E736-6BDB-49C8-B536-B21A78FC6581}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B194C03-E5E2-49C3-ABAD-14F06026B131}
+	EndGlobalSection
+EndGlobal

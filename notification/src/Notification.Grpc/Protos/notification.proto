@@ -1,0 +1,94 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+option csharp_namespace = "Notification.gRPC";
+
+package notofication;
+
+
+// The notification service definition.
+
+service Notification {
+  rpc GetMessages(google.protobuf.Empty) returns (MessageResponse);
+  rpc GetMessageByDate(MessageRequest) returns (MessageResponse);
+  rpc DeleteMessage(DeleteMessageRequest) returns (DeleteMessageRequest);
+  rpc DeleteMessageByDate(MessageRequest) returns (google.protobuf.Empty);
+
+  rpc SendText(TextMessage) returns (ReplyMessage);
+  rpc SendProgress(ProgressMessage) returns (ReplyMessage);
+  rpc SendProgressText(ProgressTextMessage) returns (ReplyMessage);
+  rpc SendRefreshMeterInstant(RefreshMeterInstantMessage) returns (ReplyMessage);
+  rpc SendRefreshEnergyProfile(RefreshEnergyProfileMessage) returns (ReplyMessage);
+}
+
+
+enum MessageScope
+{
+    general = 0;
+    update_meter_table = 1;
+    update_equipment_energy_table = 2;
+    upload_meter_file = 3;
+}
+
+enum MessageType
+{
+    success = 0;
+    error = 1;
+    warning = 2;
+    info = 3;
+}
+
+message TextMessage
+{
+    string id = 1;
+    string text = 2;
+    MessageScope message_scope = 3;
+    MessageType message_type = 4;
+    google.protobuf.Timestamp date = 5;
+    bool save = 6;
+}
+
+message ProgressMessage
+{
+    int32 progress = 1;
+    MessageScope message_scope = 2;
+}
+
+message ProgressTextMessage
+{
+    string text = 1;
+    MessageScope message_scope = 2;
+}
+
+message RefreshMeterInstantMessage
+{
+}
+
+message RefreshEnergyProfileMessage
+{
+    google.protobuf.Timestamp start_date = 1;
+    google.protobuf.Timestamp end_date = 2;
+}
+
+message ReplyMessage
+{
+    bool succeed = 1;
+}
+
+message MessageRequest
+{
+    google.protobuf.Timestamp date = 1;
+}
+
+message MessageResponse
+{
+  repeated TextMessage messages = 1;
+}
+
+message DeleteMessageRequest
+{
+    string message_id = 1;
+}
+

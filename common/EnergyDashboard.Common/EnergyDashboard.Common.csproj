@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" Version="2.2.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions"  />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational"  />
+		<!--<PackageReference Include="Newtonsoft.Json"   />-->
+		<PackageReference Include="Microsoft.Extensions.Http.Polly"  />
+	</ItemGroup>
+
+</Project>

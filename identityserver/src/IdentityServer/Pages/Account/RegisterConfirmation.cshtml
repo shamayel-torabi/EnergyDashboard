@@ -1,0 +1,24 @@
+﻿@page
+@model RegisterConfirmationModel
+@{
+    ViewData["Title"] = "تائیدیه ثبت نام";
+}
+
+<div class="row justify-content-center mb-2">
+    <div class="col-md-8 col-md-offset-2">
+        <h1>@ViewData["Title"]</h1>
+        <hr />
+        @{
+            if (@Model.DisplayConfirmAccountLink)
+            {
+                <h5>این نرم افزار فعلا فرستنده واقعی ایمیل ندارد. برای تائید ثبت نام <a id="confirm-link" href="@Model.EmailConfirmationUrl">اینجا را کلیلک کنید</a> </h5>
+            }
+            else
+            {
+                <h5>لطفا رایانامه خود را برای تائید ثبت نام بررسی کنید.</h5>
+            }
+        }
+    </div>
+</div>
+
+

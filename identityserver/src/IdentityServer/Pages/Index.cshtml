@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "احراز هویت";
+}
+@inject IWebHostEnvironment environment
+
+<!-- @if (environment.IsDevelopment())
+{
+    <div>
+        <ul>
+            <li>
+                <a href="~/.well-known/openid-configuration">discovery document</a>
+            </li>
+        </ul>
+    </div>
+} -->
+
+<div>
+    <ul>
+        <li>
+            <a href="~/.well-known/openid-configuration">discovery document</a>
+        </li>
+    </ul>
+</div>

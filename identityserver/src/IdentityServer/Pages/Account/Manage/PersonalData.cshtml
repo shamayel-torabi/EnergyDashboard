@@ -1,0 +1,28 @@
+﻿@page
+@model PersonalDataModel
+@{
+    ViewData["Title"] = "داده های فردی";
+    ViewData["ActivePage"] = ManageNavPages.PersonalData;
+}
+
+<h3>@ViewData["Title"]</h3>
+
+<div class="row">
+    <div class="col-md-12">
+        <p>حساب کاربری شما حاوی اطلاعات فردی است که در این سایت  وارد کرده اید. این صفحه به شما کمک می کند که این اطلاعات را بارگذاری یا حذف کنید.</p>
+
+        <p>
+            <strong>حذف این داده ها حساب کاری شما را برای همیشه حذف خواهد کرد و قابل بازیابی نیست.</strong>
+        </p>
+        <form id="download-data" asp-page="DownloadPersonalData" method="post">
+            <button class="btn btn-primary" type="submit">بارگذاری</button>
+        </form>
+        <p>
+            <a class="btn btn-danger" id="delete" asp-page="DeletePersonalData">حذف</a>
+        </p>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

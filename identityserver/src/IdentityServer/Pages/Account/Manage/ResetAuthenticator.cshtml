@@ -1,0 +1,25 @@
+﻿@page
+@model ResetAuthenticatorModel
+@{
+    ViewData["Title"] = "بازنشانی کلید نرم افزار احراز هویت";
+    ViewData["ActivePage"] = ManageNavPages.TwoFactorAuthentication;
+}
+
+<partial name="_StatusMessage" for="StatusMessage" />
+<h3>@ViewData["Title"]</h3>
+<div class="alert alert-warning" role="alert">
+    <p>
+        <span class="glyphicon glyphicon-warning-sign"></span>
+        <strong>اگر کلید احراز هویت را بازنشانی کنید نرم افزار قادر نخواهد بود کار کند مگر اینکه تنطیم مجدد انجام شود.</strong>
+
+
+    </p>
+    <p>
+        با انجام این فرایند احراز هویت دو مرحله ای تا زمان تائید نرم افزار غیر فعال می شود. اگر شما مراحل تائید توسط نرم افزار را انجام ندهید ممکن است دسترسی به سایت نداشه باشید
+    </p>
+</div>
+<div>
+    <form id="reset-authenticator-form" method="post">
+        <button id="reset-authenticator-button" class="btn btn-danger" type="submit">بازنشانی کلید احراز هویت</button>
+    </form>
+</div>
